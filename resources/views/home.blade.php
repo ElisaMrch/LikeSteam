@@ -56,8 +56,15 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
+          <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="text-white">
+                    {{ __('Log Out') }}
+                </button>
+            </form>
+
+            <li><a href="{{ url('/profile') }}" class="text-white">Profile2</a></li>
+
             <li><a href="#" class="text-white">Email me</a></li>
           </ul>
         </div>
@@ -94,7 +101,7 @@
 
  @yield('content')
 
-
+ 
     </main>
 
 <footer class="text-muted py-5">

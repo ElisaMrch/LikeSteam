@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Shop\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "App\Http\Controllers\Shop\MainController@index");
+Route::get('/', function () {
+    return view('welcome');
+});
+
+/*Route::get('/ert', function () {
+    return view('index');
+})->middleware(['auth'])->name('index');*/
+
+Route::get('/autre', [MainController::class, 'index']);
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+/*Route::get('/profile', [MainController::class, 'profile']);*/
+
+require __DIR__.'/auth.php';
