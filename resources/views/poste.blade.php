@@ -55,7 +55,9 @@
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
+        
           <ul class="list-unstyled">
+          <li><a href="{{ url('/profile') }}" class="text-white">Page Utilisateur</a></li>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit" class="text-white">
@@ -63,7 +65,6 @@
                 </button>
             </form>
 
-            <li><a href="{{ url('/poste') }}" class="text-white">Poster votre jeu</a></li>
           </ul>
         </div>
       </div>
@@ -81,25 +82,6 @@
     </div>
   </div>
 </header>
-
-<main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Profile</h1>
-        <p class="lead text-muted">Profile de NOMVARIABLEATROUVER </p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Modifier Mot de passe</a>
-          <a href="#" class="btn btn-secondary my-2">Modifier Username</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-
- 
-</main>
 
 
 

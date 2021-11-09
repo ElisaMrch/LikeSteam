@@ -28,6 +28,10 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/poste', function () {
+    return view('poste');
+});
+
 /*Route::get('/profile', [MainController::class, 'profile']);*/
 
 require __DIR__.'/auth.php';
