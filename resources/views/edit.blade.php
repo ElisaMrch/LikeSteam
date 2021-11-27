@@ -84,35 +84,98 @@
     </div>
   </div>
 </header>
-
 <main>
+<h1>Update Poste</h1>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  @if(session()->has('message'))
-      <div style="width:80%; margin:auto; margin: top 10rem; padding: left 2rem;">
-        <p style="width:50%; margin: bottom 4rem; color:gray-50; background-color:green-500; border: radius 1rem; padding: top 4rem;">
-          {{session()->get('message')}}
-        </p>
+@if ($errors->any())
+      <div class="width: 80%; magin:auto">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li style="width: 20%; margin-bottom:4rem; color:white; background-color:red; border: raduis 1rem; padding: top 1rem;">
+              {{$error}}
+            </li>
+          @endforeach
+        </ul>
       </div>
 @endif
 
- @yield('content')
 
+<div style="width: 80%; margin:auto; padding: top 5rem;">
+      <form 
+        action="/jeu/{{$jeu->slug}}"
+        method="POST"
+        enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
 
- 
-    </main>
+        <input
+          type="text"
+          name="nom"
+          value="{{ $jeu->nom}}"
+          style="background-color:transparent; display:block; border: bottom w 1px; width:100%; font-size:2rem; outline:1px ">
+        </input>
+
+        <input 
+          type="text"
+          name="créateur"
+          value="{{ $jeu->créateur}}"
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+        
+        <input 
+          type="textarea"
+          name="description"
+          value="{{$jeu->description}}"
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%; height: 15rem/*2rem; font: size 1.25rem; outline: 2px solid">
+        </input>
+
+    <select name = "categorie">
+        <option value = "">Catégorie</option>
+          <option value = "Action">Action</option>
+          <option value = "RPG">RPG</option>
+          <option value = "Stratégie">Stratégie</option>
+          <option value = "Aventure">Aventure</option>
+          <option value = "Simulation">Simulation</option>
+          <option value = "Sport">Sport</option>
+          <option value = "VR">VR</option>
+          <option value = "demo">demo</option>
+    </select>
+
+        <input 
+          type="float"
+          name="prix"
+          value="{{$jeu->prix}}"
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+
+        <input 
+          type="url"
+          name="url"
+          value="{{$jeu->url}}"
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+
+        <div style="background-color:gray-light; padding: top 3.75em; ">
+        
+            <span>Affiche du jeu : </span>
+            <input 
+          type="url"
+          name="photo_principale"
+          value="{{$jeu->photo_principale}}"
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+        </div>
+        <button 
+          type="submit"
+          classe= "text-white"
+          style=" margin-top:3.75rem; background-color:grey; font-weight: 800; padding: auto">
+          Poster
+        </button>
+      </form>
+</div>
+
+</main>
+
 
 <footer class="text-muted py-5">
   <div class="container">

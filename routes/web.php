@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Shop\MainController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,9 @@ Route::get('/', function () {
     return view('index');
 })->middleware(['auth'])->name('index');*/
 
-Route::get('/autre', [MainController::class, 'index']);
+//Route::get('/autre', [MainController::class, 'index']);
+Route::get('/autre', [PostsController::class, 'index']);
+Route::resource('/jeu', PostsController::class);
 
 Route::get('/profile', function () {
     return view('profile');

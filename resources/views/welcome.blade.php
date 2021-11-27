@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Album example · Bootstrap v5.1</title>
+    <title>Welcome Steam</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -39,6 +40,16 @@
           font-size: 3.5rem;
         }
       }
+      .background-image
+      {
+        background-image: url('https://www.journaldugeek.com/files/2013/11/Steam-OS.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 600px
+      }
+      
     </style>
 
     
@@ -73,6 +84,76 @@
   </div>
 </header>
 
-<h1 align="center">STEAM</h1>
-            
+<section>
+
+  <div class="background-image grid grid-cols-1 m-auto">
+        <div class="flex text-white pt-10">
+            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
+                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
+                  Steam
+                </h1>
+            </div>
+        </div>
+  </div>
+
+  <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200" style="display:flex; flex-direction:row">
+          <div>
+              <img src="https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg" width="700" alt="">
+          </div>
+
+          <div class="m-auto sm:m-auto text-left w-4/5 block">
+              <h2 class="text-3xl font-extrabold text-gray-600">
+                C'est quoi Steam ?
+              </h2>
+              
+              <p class="py-8 text-gray-500 text-s">
+                Steam est une plateforme qui propose de jouer à des jeux vidéo sans avoir besoin d'acheter un support physique.
+              </p>
+          </div>
+  </div>
+
+
+    <div class="text-center py-15">
+        <h1 class="uppercase text-s text-gray-400">
+            Jeux
+        </h1>
+
+        <h2 class="text-4xl font-bold py-10">
+            Poste recent
+        </h2>
+    </div>
+
+    <div class="sm:grid grid-cols-2 w-4/5 m-auto" style="background-color:purple; width:70%; display:flex; flex-direction:row" >
+        <div>
+            <img src="https://s1.gaming-cdn.com/images/products/9990/271x377/the-elder-scrolls-v-skyrim-anniversary-upgrade-anniversary-edition-pc-jeu-steam-cover.jpg" alt="">
+        </div>    
+        <div class="flex text-gray-100 pt-10">
+            <div class="flex m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-white" >
+                <h2 class="uppercase text-xs">
+                    NOM JEUX
+                </h2>
+
+                <h3 class="text-xl font-bold py-10">
+                    DESCRIPTION JEUX
+                </h3>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+</body>
+
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>     
+<script src="{{asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </html>

@@ -84,36 +84,35 @@
     </div>
   </div>
 </header>
-
 <main>
+<div class="album py-5 bg-light">
+    <div class="container">
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+       
+      
+      
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <!--<img class="bd-placeholder-img card-img-top" width="100%" height="225"-->
+            <div class="card-body"> 
+              <h1>{{ $jeu->nom }}</h1>
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{$jeu->photo_principale}}">
+              <p>{{ $jeu->description}}</p>
+              
+                
+                  
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
-  </section>
-
-  @if(session()->has('message'))
-      <div style="width:80%; margin:auto; margin: top 10rem; padding: left 2rem;">
-        <p style="width:50%; margin: bottom 4rem; color:gray-50; background-color:green-500; border: radius 1rem; padding: top 4rem;">
-          {{session()->get('message')}}
-        </p>
-      </div>
-@endif
-
- @yield('content')
-
-
- 
-    </main>
-
+  </div>
+ </main>
 <footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1">

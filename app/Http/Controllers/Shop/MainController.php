@@ -15,14 +15,14 @@ class MainController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    /*public function index(){
         $jeus = Jeu::all();
+            
         //dd($jeus);
         return view('shop.index', compact('jeus'));
-    }
+    }*/
 
     /*public function profile(){
         return view('profile');
     }*/
-    
 }

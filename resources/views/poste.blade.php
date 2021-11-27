@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Album example · Bootstrap v5.1</title>
+    <title>game post</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -82,6 +82,104 @@
     </div>
   </div>
 </header>
+<body>
+<section>
+<div>
+  <h1 style="text-align:center; margin-top: 3rem; margin-bottom: 3rem">Poste ton jeu :</h1>
+</div>
+@if ($errors->any())
+      <div class="width: 80%; magin:auto">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li style="width: 20%; margin-bottom:4rem; color:white; background-color:red; border: raduis 1rem; padding: top 1rem;">
+              {{$error}}
+            </li>
+          @endforeach
+        </ul>
+      </div>
+@endif
+@if(session()->has('message'))
+      <div style="width:80%; margin:auto; margin: top 10rem; padding: left 2rem;">
+        <p style="width:50%; margin: bottom 4rem; color:gray-50; background-color:green-500; border: radius 1rem; padding: top 4rem;">
+          {{session()->get('message')}}
+        </p>
+      </div>
+@endif
+
+<div style="width: 80%; margin:auto; padding: top 5rem;">
+      <form 
+        action="/jeu"
+        method="POST"
+        enctype="multipart/form-data">
+        @csrf
+        <input
+          type="text"
+          name="nom"
+          placeholder="Nom du Jeu...."
+          style="background-color:transparent; display:block; border: bottom w 1px; width:100%; font-size:2rem; outline:1px ">
+        </input>
+
+        <input 
+          type="text"
+          name="créateur"
+          placeholder="créateur"
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+        
+        <input 
+          type="textarea"
+          name="description"
+          placeholder="Description...."
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%; height: 15rem/*2rem; font: size 1.25rem; outline: 2px solid">
+        </input>
+
+      <select name = "categorie">
+        <option value = "">Catégorie</option>
+          <option value = "Action">Action</option>
+          <option value = "RPG">RPG</option>
+          <option value = "Stratégie">Stratégie</option>
+          <option value = "Aventure">Aventure</option>
+          <option value = "Simulation">Simulation</option>
+          <option value = "Sport">Sport</option>
+          <option value = "VR">VR</option>
+          <option value = "demo">demo</option>
+    </select>
+
+        <input 
+          type="float"
+          name="prix"
+          placeholder="prix en €...."
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+
+        <input 
+          type="url"
+          name="url"
+          placeholder="Url...."
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+
+        <div style="background-color:gray-light; padding: top 3.75em; ">
+        
+            <span>Affiche du jeu : </span>
+            <input 
+          type="url"
+          name="photo_principale"
+          placeholder="Url...."
+          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        </input>
+        </div>
+        <button 
+          type="submit"
+          classe= "text-white"
+          style=" margin-top:3.75rem; background-color:grey; font-weight: 800; padding: auto">
+          Poster
+        </button>
+      </form>
+</div>
+
+</section> 
+</body>
 
 
 
