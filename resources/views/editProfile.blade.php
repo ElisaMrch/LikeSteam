@@ -81,33 +81,44 @@
     </div>
   </div>
 </header>
-
 <main>
-@if(session()->has('message'))
-      <div style="width:80%; margin:auto; margin: top 10rem; padding: left 2rem;">
-        <p style="width:50%; margin: bottom 4rem; color:gray-50; background-color:green-500; border: radius 1rem; padding: top 4rem;">
-          {{session()->get('message')}}
-        </p>
+
+@if ($errors->any())
+      <div class="width: 80%; magin:auto">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li style="width: 20%; margin-bottom:4rem; color:white; background-color:red; border: raduis 1rem; padding: top 1rem;">
+              {{$error}}
+            </li>
+          @endforeach
+        </ul>
       </div>
 @endif
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Profile</h1>
-        <p class="lead text-muted">Profile de {{auth()->user()->name}}</p>
-        <p>
-          <a class="btn btn-secondary my-2" href="/profil/{{ auth()->user()->id}}/edit">Modifier Username</a>
-        </p>
-      </div>
-    </div>
-  </section>
+<div style="width: 80%; margin:auto; padding: top 5rem;">
+      <form 
+        action="/profil/{{ auth()->user()->id}}"
+        method="POST"
+        enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
 
+        
+        <input
+          type="text"
+          name="name"
+          value="{{ auth()->user()->name}}"
+          style="background-color:transparent; display:block; border: bottom w 1px; width:100%; font-size:2rem; outline:1px ">
+        </input>
+      
+      <button 
+          type="submit"
+          classe= "text-white"
+          style=" margin-top:3.75rem; background-color:grey; font-weight: 800; padding: auto">
+          Edit
+        </button>
+        </form>
 
- 
 </main>
-
-
-
 <script src="{{asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

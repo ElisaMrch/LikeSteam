@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Shop\MainController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
 /*
@@ -27,6 +28,8 @@ Route::get('/', function () {
 //Route::get('/autre', [MainController::class, 'index']);
 Route::get('/autre', [PostsController::class, 'index']);
 Route::resource('/jeu', PostsController::class);
+
+Route::resource('/profil', AuthenticatedSessionController::class);
 
 Route::get('/profile', function () {
     return view('profile');

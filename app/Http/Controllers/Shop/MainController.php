@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Shop;
 
 use App\Models\Jeu;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class MainController extends Controller
 {
@@ -25,4 +27,6 @@ class MainController extends Controller
     /*public function profile(){
         return view('profile');
     }*/
+
+
 }
