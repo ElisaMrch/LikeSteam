@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>game post</title>
+    <title>Poster</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -49,19 +49,19 @@
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+      <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Quelques informations :</h4>
+          <p class="text-muted">Steam est une plateforme de distribution de contenu en ligne, de gestion des droits et de communication développée par Valve et disponible depuis le 11 septembre 2003. </p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
+          <h4 class="text-white">Pages</h4>
         
           <ul class="list-unstyled">
           <li><a href="{{ url('/profile') }}" class="text-white">Page Utilisateur</a></li>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="text-white">
-                    {{ __('Log Out') }}
+                <button type="submit" style="border:none;text-decoration: underline;background-color:transparent;color: white">
+                  {{ __('Log Out') }}
                 </button>
             </form>
 
@@ -73,7 +73,7 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="/autre" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="4"/></svg>
         <strong>Acceuil</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,7 +106,7 @@
       </div>
 @endif
 
-<div style="width: 80%; margin:auto; padding: top 5rem;">
+<div style="width: 30%; margin:auto; padding: top 5rem;">
       <form 
         action="/jeu"
         method="POST"
@@ -115,25 +115,26 @@
         <input
           type="text"
           name="nom"
-          placeholder="Nom du Jeu...."
-          style="background-color:transparent; display:block; border: bottom w 1px; width:100%; font-size:2rem; outline:1px ">
+          placeholder="...Nom du Jeu..."
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.75rem; ">
         </input>
 
         <input 
           type="text"
           name="créateur"
-          placeholder="créateur"
-          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+          placeholder="...Créateur..."
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; ">
         </input>
         
         <input 
           type="textarea"
           name="description"
-          placeholder="Description...."
-          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%; height: 15rem/*2rem; font: size 1.25rem; outline: 2px solid">
+          placeholder="...Description...."
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; height: 8rem/*2rem; ">
         </input>
 
-      <select name = "categorie">
+      <div align = "center"  style="margin-bottom: 10px"  >
+      <select style="text-align:center;border-radius: 8px;margin-bottom: 5px;width:100%"name = "categorie">
         <option value = "">Catégorie</option>
           <option value = "Action">Action</option>
           <option value = "RPG">RPG</option>
@@ -144,35 +145,35 @@
           <option value = "VR">VR</option>
           <option value = "demo">demo</option>
     </select>
+    </div>
 
         <input 
           type="float"
           name="prix"
-          placeholder="prix en €...."
-          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+          placeholder="...Prix en €..."
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; ">
         </input>
 
         <input 
           type="url"
           name="url"
-          placeholder="Url...."
-          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+          placeholder="...Url..."
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; ">
         </input>
 
-        <div style="background-color:gray-light; padding: top 3.75em; ">
+        <div style="background-color:gray-light;">
         
-            <span>Affiche du jeu : </span>
+            <p style="text-align:center" >Affiche du jeu : </p>
             <input 
           type="url"
           name="photo_principale"
-          placeholder="Url...."
-          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+          placeholder="...Url de l'image..."
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 5px; width:100%; font-size:1.25rem; ">
         </input>
         </div>
         <button 
           type="submit"
-          classe= "text-white"
-          style=" margin-top:3.75rem; background-color:grey; font-weight: 800; padding: auto">
+          style="text-align:center;border-radius: 8px;margin-bottom: 5px;width:20%;background-color:#45C335;color: white">
           Poster
         </button>
       </form>

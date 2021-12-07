@@ -31,6 +31,8 @@ Route::resource('/jeu', PostsController::class);
 
 Route::resource('/profil', AuthenticatedSessionController::class);
 
+Route::get('/recherche', [MainController::class, 'search'])->name('recherche');
+
 Route::get('/profile', function () {
     return view('profile');
 });

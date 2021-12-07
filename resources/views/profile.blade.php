@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Album example · Bootstrap v5.1</title>
+    <title>Profile</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -49,16 +49,16 @@
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+      <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Quelques informations :</h4>
+          <p class="text-muted">Steam est une plateforme de distribution de contenu en ligne, de gestion des droits et de communication développée par Valve et disponible depuis le 11 septembre 2003. </p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="text-white">
+                <button type="submit" style="border:none;text-decoration: underline;background-color:transparent;color: white">
                     {{ __('Log Out') }}
                 </button>
             </form>
@@ -72,7 +72,7 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="/autre" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="4"/></svg>
         <strong>Acceuil</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

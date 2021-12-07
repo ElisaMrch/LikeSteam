@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Welcome Steam</title>
+    <title>Bienvenue sur Steam</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -42,7 +42,7 @@
       }
       .background-image
       {
-        background-image: url('https://www.journaldugeek.com/files/2013/11/Steam-OS.jpg');
+        background-image: url('https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -61,7 +61,7 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="4"/></svg>
         <strong>Connectez vous</strong>
       </a>
       <body class="antialiased">
@@ -87,59 +87,23 @@
 <section>
 
   <div class="background-image grid grid-cols-1 m-auto">
-        <div class="flex text-white pt-10">
-            <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
-                  Steam
-                </h1>
-            </div>
-        </div>
   </div>
 
   <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200" style="display:flex; flex-direction:row">
-          <div>
-              <img src="https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg" width="700" alt="">
+          <div style="margin-left: 100px">
+              <img src="https://l-agence-communication.fr/wp-content/uploads/2020/03/mascotte-logo.png" width="400" alt="">
           </div>
 
           <div class="m-auto sm:m-auto text-left w-4/5 block">
-              <h2 class="text-3xl font-extrabold text-gray-600">
+              <h2 class="text-3xl font-extrabold text-gray-600" style="text-align : center;font-size: 55px ">
                 C'est quoi Steam ?
               </h2>
               
-              <p class="py-8 text-gray-500 text-s">
-                Steam est une plateforme qui propose de jouer à des jeux vidéo sans avoir besoin d'acheter un support physique.
+              <p style ="padding-left: 150px;padding-right: 150px;padding-top: 30px;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
               </p>
           </div>
   </div>
-
-
-    <div class="text-center py-15">
-        <h1 class="uppercase text-s text-gray-400">
-            Jeux
-        </h1>
-
-        <h2 class="text-4xl font-bold py-10">
-            Poste recent
-        </h2>
-    </div>
-
-    <div class="sm:grid grid-cols-2 w-4/5 m-auto" style="background-color:purple; width:70%; display:flex; flex-direction:row" >
-        <div>
-            <img src="https://s1.gaming-cdn.com/images/products/9990/271x377/the-elder-scrolls-v-skyrim-anniversary-upgrade-anniversary-edition-pc-jeu-steam-cover.jpg" alt="">
-        </div>    
-        <div class="flex text-gray-100 pt-10">
-            <div class="flex m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-white" >
-                <h2 class="uppercase text-xs">
-                    NOM JEUX
-                </h2>
-
-                <h3 class="text-xl font-bold py-10">
-                    DESCRIPTION JEUX
-                </h3>
-            </div>
-        </div>
-        
-    </div>
 
 </section>
 </body>
@@ -148,10 +112,9 @@
 <footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a href="#">Back to top</a>
+      <a href="#">Retourner en haut</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+    <p class="mb-1">Fait par : &copy; Elisa Marchand et Ciriane Vergnaud</p>
   </div>
 </footer>     
 <script src="{{asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

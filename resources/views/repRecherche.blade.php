@@ -19,19 +19,19 @@
                 <div class="btn-group">
                   <a href="/jeu/{{ $jeus->slug }}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
                   @if (isset(Auth::user()->id) && Auth::user()->id == $jeus->user_id)
-                    <a type="button" class="btn btn-sm btn-outline-secondary" href="/jeu/{{ $jeus->slug}}/edit">Edit</a>
-                    <span>
-                      <form
-                        action="/jeu/{{ $jeus->slug}}"
-                        method="POST">
-                        @csrf
-                        @method('delete')
-                        <button
-                        type="SUBMIT" class="btn btn-sm btn-outline-secondary">
-                          Suppr
-                        </button>
-                      </form>
-                    </span>
+                  <a type="button" class="btn btn-sm btn-outline-secondary" href="/jeu/{{ $jeus->slug}}/edit">Edit</a>
+                  <span>
+                    <form
+                      action="/jeu/{{ $jeus->slug}}"
+                      method="POST">
+                      @csrf
+                      @method('delete')
+                      <button
+                      type="SUBMIT" class="btn btn-sm btn-outline-secondary">
+                        Suppr
+                      </button>
+                    </form>
+                  </span>
                   @endif
                 </div>
               </div>

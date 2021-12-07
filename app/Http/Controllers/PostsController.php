@@ -24,7 +24,7 @@ class PostsController extends Controller
     public function index()
     {
         return view('shop.index')
-            ->with('jeus', Jeu::orderBy('updated_at', 'DESC')->get());
+            ->with('jeus', Jeu::orderBy('created_at', 'DESC')->get());
     }
 
     /**

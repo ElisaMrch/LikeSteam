@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>home</title>
+    <title>Menu</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
 
@@ -50,15 +50,15 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+          <h4 class="text-white">Quelques informations :</h4>
+          <p class="text-muted">Steam est une plateforme de distribution de contenu en ligne, de gestion des droits et de communication développée par Valve et disponible depuis le 11 septembre 2003. </p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
+          <h4 class="text-white"></h4>
           <ul class="list-unstyled">
           <li><form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="text-white">
+                <button type="submit" style="border:none;text-decoration: underline;background-color:transparent;color: white">
                     {{ __('Log Out') }}
                 </button>
             </form></li>
@@ -92,34 +92,34 @@
        
       
       
-        <div class="col">
-          <div class="card shadow-sm">
-            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-            <!--<img class="bd-placeholder-img card-img-top" width="100%" height="225"-->
-            <div class="card-body"> 
-              <h1>{{ $jeu->nom }}</h1>
-              <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{$jeu->photo_principale}}">
-              <p>{{ $jeu->description}}</p>
+
+            <div class="card-body" > 
+              <h1  style="text-align:center;margin-bottom: 10px; font-size:60px;text-decoration: underline; ">{{ $jeu->nom }}</h1>
+              <img style="margin-left : 25rem" class="bd-placeholder-img" width="500" height="auto" src="{{$jeu->photo_principale}}">
+              <p style="text-align:center">{{ $jeu->description}}</p>
+              <p style="text-align:center">{{ $jeu->prix}} €</p>
+              <p style="text-align:center">{{ $jeu->créateur}}</p>
+              <p style="text-align:center">{{ $jeu->type}}</p>
+              <a style="margin-left : 28rem" class="text-black "href =" {{ $jeu->url}}"> Download</a>
+              
               
                 
                   
                 
-              </div>
             </div>
           </div>
-        </div>
+
         
       </div>
     </div>
   </div>
  </main>
 <footer class="text-muted py-5">
-  <div class="container">
+<div class="container">
     <p class="float-end mb-1">
-      <a href="#">Back to top</a>
+      <a href="#">Retourner en haut</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.1/getting-started/introduction/">getting started guide</a>.</p>
+    <p class="mb-1">Fait par : &copy; Elisa Marchand et Ciriane Vergnaud</p>
   </div>
 </footer>
 
