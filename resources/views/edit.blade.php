@@ -84,7 +84,7 @@
 
 <body>
 <main>
-  <h1>Update Poste</h1>
+  <h1 style="text-align:center; margin-top: 3rem; margin-bottom: 3rem">Update Poste</h1>
 
 @if ($errors->any())
   <div class="width: 80%; magin:auto">
@@ -98,7 +98,7 @@
   </div>
 @endif
 
-  <div style="width: 80%; margin:auto; padding: top 5rem;">
+  <div style="width: 30%; margin:auto; padding: top 5rem;">
     <form 
       action="/jeu/{{$jeu->slug}}"
       method="POST"
@@ -110,40 +110,42 @@
         type="text"
         name="nom"
         value="{{ $jeu->nom}}"
-        style="background-color:transparent; display:block; border: bottom w 1px; width:100%; font-size:2rem; outline:1px ">
+        style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.75rem; ">
       </input>
 
       <input 
         type="text"
         name="créateur"
         value="{{ $jeu->créateur}}"
-        style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; ">
       </input>
         
       <input 
         type="textarea"
         name="description"
         value="{{$jeu->description}}"
-        style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%; height: 15rem/*2rem; font: size 1.25rem; outline: 2px solid">
+        style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; height: 8rem/*2rem; ">
       </input>
-
-      <select name = "categorie">
-        <option value = "">Catégorie</option>
-        <option value = "Action">Action</option>
-        <option value = "RPG">RPG</option>
-        <option value = "Stratégie">Stratégie</option>
-        <option value = "Aventure">Aventure</option>
-        <option value = "Simulation">Simulation</option>
-        <option value = "Sport">Sport</option>
-        <option value = "VR">VR</option>
-        <option value = "demo">demo</option>
-      </select>
+      
+      <div align = "center"  style="margin-bottom: 10px"  >
+        <select style="text-align:center;border-radius: 8px;margin-bottom: 5px;width:100%"name = "categorie">
+          <option value = "">Catégorie</option>
+          <option value = "Action">Action</option>
+          <option value = "RPG">RPG</option>
+          <option value = "Stratégie">Stratégie</option>
+          <option value = "Aventure">Aventure</option>
+          <option value = "Simulation">Simulation</option>
+          <option value = "Sport">Sport</option>
+          <option value = "VR">VR</option>
+          <option value = "demo">demo</option>
+        </select>
+      </div>
 
       <input 
         type="float"
         name="prix"
         value="{{$jeu->prix}}"
-        style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+        style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 10px; width:100%; font-size:1.25rem; ">
       </input>
 
       <input 
@@ -153,20 +155,20 @@
         style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
       </input>
 
-      <div style="background-color:gray-light; padding: top 3.75em; ">
+      <div style="background-color:gray-light;">
         
-        <span>Affiche du jeu : </span>
+        <p style="text-align:center" >Affiche du jeu : </p>
         <input 
           type="url"
           name="photo_principale"
           value="{{$jeu->photo_principale}}"
-          style="padding: top 5re; background-color:transparent; display:block; border: bottom width 2px; width:100%;  font: size 1.25rem; outline: 1px solid">
+          style="text-align:center; background-color:transparent; display:block; border-radius: 8px;margin-bottom: 5px; width:100%; font-size:1.25rem; ">
         </input>
       </div>
       <button 
         type="submit"
         classe= "text-white"
-        style=" margin-top:3.75rem; background-color:grey; font-weight: 800; padding: auto">
+        style="text-align:center;border-radius: 8px;margin-bottom: 5px;width:20%;background-color:#45C335;color: white">
         Poster
       </button>
     </form>
