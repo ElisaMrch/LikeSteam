@@ -14,16 +14,16 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="{{asset('img/favicon.png')}}" sizes="32x32" type="image/png">
-<link rel="icon" href="{{asset('img/favicon.png')}}" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="{{asset('img/favicon.png')}}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{asset('img/favicon.png')}}" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
 
 
     <style>
@@ -54,8 +54,8 @@
 
     
   </head>
-  <body>
-    
+
+<body>    
 <header>
   
   <div class="navbar navbar-dark bg-dark shadow-sm">
@@ -74,14 +74,14 @@
                         <a class="text-white" href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Connecte toi</a>
 
                         @if (Route::has('register'))
-                            <a class="text-white" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Creer un compte</a>
+                          <a class="text-white" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Creer un compte</a>
                         @endif
                     @endauth
                 </div>
             @endif
-      </button>
+          </button>
+        </div>
     </div>
-  </div>
 </header>
 
 <section>

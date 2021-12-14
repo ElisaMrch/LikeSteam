@@ -13,16 +13,16 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="{{asset('img/favicon.png')}}" sizes="32x32" type="image/png">
-<link rel="icon" href="{{asset('img/favicon.png')}}" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="{{asset('img/favicon.png')}}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{asset('img/favicon.png')}}" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
 
 
     <style>
@@ -43,7 +43,7 @@
 
     
   </head>
-  <body>
+<body>
     
 <header>
   <div class="collapse bg-dark" id="navbarHeader">
@@ -56,17 +56,16 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white"></h4>
           <ul class="list-unstyled">
-          <li><form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" style="border:none;text-decoration: underline;background-color:transparent;color: white">
-                    {{ __('Log Out') }}
-                </button>
+            <li><form method="POST" action="{{ route('logout') }}">
+              @csrf
+              <button type="submit" style="border:none;text-decoration: underline;background-color:transparent;color: white">
+                {{ __('Log Out') }}
+              </button>
             </form></li>
             <li><a href="{{ url('/profile') }}" class="text-white">Page Utilisateur</a></li>
             @if(Auth::check())
-            <li ><a href="{{ url('/poste') }}" class="text-white">Poster votre jeu</a></li>
-            @endif
-           
+              <li ><a href="{{ url('/poste') }}" class="text-white">Poster votre jeu</a></li>
+            @endif 
           </ul>
         </div>
       </div>
@@ -84,48 +83,49 @@
     </div>
   </div>
 </header>
+
 <main>
-<div class="album py-5 bg-light">
+  <div class="album py-5 bg-light">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-       
-      
-      
+        <div class="card-body" > 
+          <h1  style="text-align:center;margin-bottom: 10px; font-size:60px ">{{ $jeu->nom }}</h1>
+          <div style = "display: flex; flex-direction: row;margin-top: 30px">
+            <div>
+              <img  style ="border: 5px solid #57605a; border-radius: 10px " class="bd-placeholder-img" width="500" height="auto" src="{{$jeu->photo_principale}}">
+            </div>
+            <div style="margin-top: 20px;margin-left: 50px">
+              <p style="text-align:left;font-size:20px;text-decoration: underline;line-height:90%"> Description : </p>
+              <p style="text-align:left;line-height:85%"> {{ $jeu->description}}</p>
 
-            <div class="card-body" > 
-              <h1  style="text-align:center;margin-bottom: 10px; font-size:60px;text-decoration: underline; ">{{ $jeu->nom }}</h1>
-              <img style="margin-left : 25rem" class="bd-placeholder-img" width="500" height="auto" src="{{$jeu->photo_principale}}">
-              <p style="text-align:center">{{ $jeu->description}}</p>
-              <p style="text-align:center">{{ $jeu->prix}} €</p>
-              <p style="text-align:center">{{ $jeu->créateur}}</p>
-              <p style="text-align:center">{{ $jeu->type}}</p>
-              <a style="margin-left : 28rem" class="text-black "href =" {{ $jeu->url}}"> Download</a>
-              
-              
-                
-                  
-                
+              <p style="text-align:left;font-size:20px;text-decoration: underline;line-height:90%"> Prix : </p>
+              <p style="text-align:left;line-height:20%"> {{ $jeu->prix}} €</p>
+
+              <p style="text-align:left;font-size:20px;text-decoration: underline;line-height:90%"> Créateur : </p>
+              <p style="text-align:left;line-height:20%"> {{ $jeu->créateur}}</p>
+
+              <p style="text-align:left;font-size:20px;text-decoration: underline;line-height:90%"> Catégorie : </p>
+              <p style="text-align:left;line-height:20%"> {{ $jeu->type}}</p>
+
+              <a style="margin-left : 15rem" class="text-black "href =" {{ $jeu->url}}"> Download</a>
             </div>
           </div>
-
-        
-      </div>
+        </div>
+      </div>    
     </div>
   </div>
- </main>
+</main>
+
 <footer class="text-muted py-5">
-<div class="container">
+  <div class="container">
     <p class="float-end mb-1">
       <a href="#">Retourner en haut</a>
     </p>
     <p class="mb-1">Fait par : &copy; Elisa Marchand et Ciriane Vergnaud</p>
   </div>
 </footer>
+</body>
 
+<script src="{{asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-      
-  </body>
 </html>
